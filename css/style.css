@@ -263,6 +263,11 @@ button:focus-visible {
     object-fit: cover;
     object-position: center top; /* shifts crop toward the top — adjust per image if a face/head gets cut off */
     border-radius: 6px;
+    cursor: zoom-in;
+    transition: opacity 0.15s ease;
+}
+.photo:hover {
+    opacity: 0.9;
 }
 
 .photo--sm {
