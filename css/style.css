@@ -254,6 +254,22 @@ button:focus-visible {
     aspect-ratio: 4 / 3;
 }
 
+/* Real photos — use this class once you swap in an <img>, instead of
+   keeping .photo-placeholder (which is dashed-border/empty-state only). */
+.photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;         /* matches .hero__photo sizing */
+    object-fit: cover;
+    object-position: center top; /* shifts crop toward the top — adjust per image if a face/head gets cut off */
+    border-radius: 6px;
+    border: 1px solid var(--line);
+}
+
+.photo--sm {
+    aspect-ratio: 4 / 3;         /* matches gallery sizing */
+}
+
 .hero__stats {
     display: flex;
     gap: 40px;

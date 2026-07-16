@@ -4,7 +4,7 @@ A static portfolio site showcasing professional experience, academic
 background, and athletic career, built with plain HTML, CSS, and JavaScript
 and deployed on [Vercel](https://vercel.com).
 
-**Live site:** [https://dimarvanderlinde.vercel.app/](https://dimarvanderlinde.vercel.app/) <!-- Update with your actual deployment URL -->
+**Live site:** [personalwebsite-yourname.vercel.app](https://personalwebsite-yourname.vercel.app) <!-- Update with your actual deployment URL -->
 
 ## Tech stack
 
@@ -32,7 +32,7 @@ Clone the repository and open `index.html` directly in a browser — no build
 step or dependencies are required.
 
 ```bash
-git clone https://github.com/dimarvanderlinde-source/personalwebsite
+git clone https://github.com/yourusername/personalwebsite.git
 cd personalwebsite
 open index.html   # or double-click the file / use "Open in Browser" in your editor
 ```
@@ -71,16 +71,25 @@ Duplicate this block to add entries, or remove it to delete one.
 ### Adding images
 
 1. Add image files to the `images/` directory.
-2. Replace the relevant placeholder in `index.html`:
+2. Replace the relevant placeholder `<div class="photo-placeholder">...</div>` in
+   `index.html` with an `<img>` using the `.photo` class (not `.photo-placeholder`,
+   which is reserved for the empty-state box):
 
    ```html
-   <div class="photo-placeholder">...</div>
+   <!-- Hero photo (square) -->
+   <img src="images/profile.jpg" alt="Descriptive alt text" class="photo">
+
+   <!-- Gallery photo (4:3) -->
+   <img src="images/sport-1.jpg" alt="Descriptive alt text" class="photo photo--sm">
    ```
 
-   with:
+   `.photo` handles sizing and cropping (`object-fit: cover`) so every image
+   fills its box cleanly regardless of its original dimensions. If a photo's
+   crop cuts off the wrong part (e.g. someone's head), adjust `object-position`
+   for that image in `style.css`, or override it inline:
 
    ```html
-   <img src="images/profile.jpg" alt="Descriptive alt text" class="photo-placeholder">
+   <img src="images/profile.jpg" alt="..." class="photo" style="object-position: center 20%;">
    ```
 
 ## Deployment
