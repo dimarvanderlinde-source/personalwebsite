@@ -263,7 +263,6 @@ button:focus-visible {
     object-fit: cover;
     object-position: center top; /* shifts crop toward the top — adjust per image if a face/head gets cut off */
     border-radius: 6px;
-    border: 1px solid var(--line);
 }
 
 .photo--sm {

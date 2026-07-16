@@ -20,7 +20,6 @@
 <header class="rail" id="rail">
     <div class="rail__top">
         <span class="rail__mark">DH</span>
-        <!-- ^ Replace "YN" with your initials, or swap for a small logo image -->
         <button class="rail__toggle" id="railToggle" aria-label="Open menu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
@@ -34,7 +33,6 @@
     </nav>
     <div class="rail__bottom">
         <a href="#" class="rail__resume">Download CV ↓</a>
-        <!-- ^ Point this href at a PDF you place in the project, e.g. "files/resume.pdf" -->
     </div>
 </header>
 
@@ -58,10 +56,8 @@
         </p>
 
         <div class="hero__photo">
-            <!-- Replace this placeholder with: <img src="images/profile.jpg" alt="Your Name"> -->
-            <div class="photo-placeholder">
-                <img src="images/ProfessionalPhoto.jpeg" height="509" width="339" alt="ProfessionalPhoto" class="photo photo--sm"/>
-            </div>
+            <!-- No wrapper div, no HTML width/height attributes — CSS (.photo) fully controls sizing -->
+            <img src="images/ProfessionalPhoto.jpeg" alt="Dimar van der Linde" class="photo"/>
         </div>
 
         <div class="hero__stats">
@@ -104,7 +100,6 @@
         </div>
 
         <div class="record__body">
-            <!-- Repeat this .entry block for each role. Duplicate / delete as needed. -->
             <article class="entry">
                 <div class="entry__when">
                     <span class="entry__dates">Jan 2026</span>
@@ -118,18 +113,18 @@
                 </div>
             </article>
 
-<!--            <article class="entry">-->
-<!--                <div class="entry__when">-->
-<!--                    <span class="entry__dates">2023 — 2025</span>-->
-<!--                </div>-->
-<!--                <div class="entry__what">-->
-<!--                    <h3 class="entry__role">Previous Job Title</h3>-->
-<!--                    <p class="entry__org">Company Name · City, Country</p>-->
-<!--                    <p class="entry__desc">-->
-<!--                        Description of this role and its key achievement or responsibility.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </article>-->
+            <!--            <article class="entry">-->
+            <!--                <div class="entry__when">-->
+            <!--                    <span class="entry__dates">2023 — 2025</span>-->
+            <!--                </div>-->
+            <!--                <div class="entry__what">-->
+            <!--                    <h3 class="entry__role">Previous Job Title</h3>-->
+            <!--                    <p class="entry__org">Company Name · City, Country</p>-->
+            <!--                    <p class="entry__desc">-->
+            <!--                        Description of this role and its key achievement or responsibility.-->
+            <!--                    </p>-->
+            <!--                </div>-->
+            <!--            </article>-->
         </div>
     </section>
 
@@ -141,7 +136,6 @@
         </div>
 
         <div class="record__body">
-            <!-- Repeat this .entry block for each degree / qualification -->
             <article class="entry">
                 <div class="entry__when">
                     <span class="entry__dates">2023 — 2027</span>
@@ -183,7 +177,6 @@
         </div>
 
         <div class="record__body">
-            <!-- Repeat this .entry block for each team / season / achievement -->
             <article class="entry">
                 <div class="entry__when">
                     <span class="entry__dates">2022 — 2026</span>
@@ -201,17 +194,14 @@
                 </div>
             </article>
 
-            <!-- Optional: a small gallery of action photos -->
+            <!-- Gallery photos — no wrapper divs, no HTML width/height attributes -->
             <div class="gallery">
-                <div class="photo-placeholder photo-placeholder--sm">
-                    <img src="images/HeadshotPhoto.png" height="410" width="236" alt="HeadshotPhoto"  class="photo photo--sm"/>
-                </div>
-                <div class="photo-placeholder photo-placeholder--sm">
-                    <img src="images/PodiumPhoto.jpg" height="1000" width="750" alt="PodiumPhoto"  class="photo photo--sm"/>
-                </div>
-                <div class="photo-placeholder photo-placeholder--sm">
-                    <img src="images/PoleVaultPhoto.jpg" height="900" width="720" alt="PoleVaultPhoto"  class="photo photo--sm"/>
-                </div>
+                <!-- Portrait headshot in a 4:3 landscape slot will always crop tight.
+                     object-position pulls the crop down toward the face instead of the hairline.
+                     If it still looks too zoomed, swap in a wider/landscape crop of this photo instead. -->
+                <img src="images/HeadshotPhoto.png" alt="Headshot" class="photo photo--sm" style="object-position: center 25%;"/>
+                <img src="images/PodiumPhoto.jpg" alt="Podium finish" class="photo photo--sm"/>
+                <img src="images/PoleVaultPhoto.jpg" alt="Pole vault clearance" class="photo photo--sm"/>
             </div>
         </div>
     </section>
