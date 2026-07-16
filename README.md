@@ -4,7 +4,7 @@ A static portfolio site showcasing professional experience, academic
 background, and athletic career, built with plain HTML, CSS, and JavaScript
 and deployed on [Vercel](https://vercel.com).
 
-**Live site:** [personalwebsite-yourname.vercel.app](https://personalwebsite-yourname.vercel.app) <!-- Update with your actual deployment URL -->
+**Live site:** [https://dimarvanderlinde.vercel.app](https://dimarvanderlinde.vercel.app) <!-- Update with your actual deployment URL -->
 
 ## Tech stack
 
@@ -32,7 +32,7 @@ Clone the repository and open `index.html` directly in a browser — no build
 step or dependencies are required.
 
 ```bash
-git clone https://github.com/yourusername/personalwebsite.git
+git clone https://github.com/dimarvanderlinde-source/personalwebsite
 cd personalwebsite
 open index.html   # or double-click the file / use "Open in Browser" in your editor
 ```
