@@ -1,55 +1,106 @@
 # Personal Website
 
-A static site — professional experience, academic record, and athletic career.
+A static portfolio site showcasing professional experience, academic
+background, and athletic career, built with plain HTML, CSS, and JavaScript
+and deployed on [Vercel](https://vercel.com).
 
-## File structure
+**Live site:** [https://dimarvanderlinde.vercel.app/](https://dimarvanderlinde.vercel.app/) <!-- Update with your actual deployment URL -->
+
+## Tech stack
+
+- HTML5
+- CSS3 (no framework — custom design system defined in `css/style.css`)
+- Vanilla JavaScript (mobile navigation and scroll-based section highlighting)
+- Deployed via Vercel
+
+## Project structure
 
 ```
 personalwebsite/
-├── index.html        ← all page content lives here
+├── index.html          # Page content and structure
 ├── css/
-│   └── style.css      ← all styling
+│   └── style.css       # Styling and layout
 ├── js/
-│   └── script.js       ← mobile menu + scroll highlighting
-├── images/             ← put your photos in here
+│   └── script.js        # Mobile menu toggle and scroll highlighting
+├── images/              # Site images
 └── README.md
 ```
 
-## Adding your content
+## Getting started
 
-Open `index.html` in IntelliJ. Every section has an HTML comment marking what
-to replace:
+Clone the repository and open `index.html` directly in a browser — no build
+step or dependencies are required.
 
-- **Hero**: your name, tagline, and a profile photo.
-- **About**: a short paragraph in your own words.
-- **Professional Experience / Academic Record / Athletic Career**: each is a
-  list of `<article class="entry">` blocks. Copy/paste the block to add more
-  entries, or delete extras.
-- **Contact**: update the email, LinkedIn, and GitHub links.
+```bash
+git clone https://github.com/dimarvanderlinde-source/personalwebsite
+cd personalwebsite
+open index.html   # or double-click the file / use "Open in Browser" in your editor
+```
 
-## Adding photos
+## Content
 
-1. Drop image files into `images/` (e.g. `images/profile.jpg`,
-   `images/sport-1.jpg`).
-2. In `index.html`, find the `<div class="photo-placeholder">` you want to
-   replace and swap it for:
+The site is organized into five sections, each editable directly in
+`index.html`:
+
+| Section | Description |
+|---|---|
+| Hero | Name, tagline, and profile photo |
+| About | Short personal introduction |
+| Professional Experience | Work history, listed as repeatable entry blocks |
+| Academic Record | Education history, listed as repeatable entry blocks |
+| Athletic Career | Sporting achievements, listed as repeatable entry blocks |
+| Contact | Email and social/professional links |
+
+Experience, academic, and athletic entries share a common markup pattern:
+
+```html
+<article class="entry">
+  <div class="entry__when">
+    <span class="entry__dates">2023 — 2025</span>
+  </div>
+  <div class="entry__what">
+    <h3 class="entry__role">Role or Title</h3>
+    <p class="entry__org">Organization · Location</p>
+    <p class="entry__desc">Brief description of the role or achievement.</p>
+  </div>
+</article>
+```
+
+Duplicate this block to add entries, or remove it to delete one.
+
+### Adding images
+
+1. Add image files to the `images/` directory.
+2. Replace the relevant placeholder in `index.html`:
+
    ```html
-   <img src="images/profile.jpg" alt="Your Name" class="photo-placeholder">
+   <div class="photo-placeholder">...</div>
    ```
-   (Keep the class if you want it to inherit the same sizing, or write a new
-   rule in `style.css`.)
 
-## Running it locally
+   with:
 
-No build step — just open `index.html` in a browser, or in IntelliJ right-click
-it and choose **Open in Browser**.
+   ```html
+   <img src="images/profile.jpg" alt="Descriptive alt text" class="photo-placeholder">
+   ```
 
-## Deploying to Vercel
+## Deployment
 
-1. Push this project to your GitHub repo (`git add . && git commit -m "Initial site" && git push`).
-2. Go to [vercel.com](https://vercel.com), sign in with GitHub, and click
-   **Add New → Project**.
-3. Select this repository. Since it's a static site, leave the framework
-   preset as **Other** — no build command or output directory needed.
-4. Click **Deploy**. Vercel will give you a live URL, and every future push
-   to your repo will auto-deploy.
+This project deploys as a static site with no build configuration required.
+
+1. Push changes to the `main` branch:
+
+   ```bash
+   git add .
+   git commit -m "Update content"
+   git push origin main
+   ```
+
+2. On [vercel.com](https://vercel.com), import the repository via **Add New → Project**.
+3. Leave the framework preset as **Other**, with no build command or output directory.
+4. Deploy. Vercel will assign a live URL and automatically redeploy on every
+   push to `main`.
+
+## License
+
+This project is personal in nature; feel free to use the structure and code
+as a reference for your own site.
