@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name — Portfolio</title>
+    <meta name="description" content="Personal portfolio — professional experience, academic record, and athletic career.">
+
+    <!-- Fonts: Source Serif 4 (display), Inter (body), IBM Plex Mono (labels/dates) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ SIDEBAR / INDEX RAIL ============ -->
+<!-- This is the fixed navigation on desktop, top bar on mobile -->
+<header class="rail" id="rail">
+    <div class="rail__top">
+        <span class="rail__mark">YN</span>
+        <!-- ^ Replace "YN" with your initials, or swap for a small logo image -->
+        <button class="rail__toggle" id="railToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+    <nav class="rail__nav" id="railNav">
+        <a href="#about" class="rail__link"><span class="rail__num">Index</span>About</a>
+        <a href="#experience" class="rail__link"><span class="rail__num">01</span>Professional</a>
+        <a href="#academic" class="rail__link"><span class="rail__num">02</span>Academic</a>
+        <a href="#sports" class="rail__link"><span class="rail__num">03</span>Athletic</a>
+        <a href="#contact" class="rail__link"><span class="rail__num">Contact</span></a>
+    </nav>
+    <div class="rail__bottom">
+        <a href="#" class="rail__resume">Download CV ↓</a>
+        <!-- ^ Point this href at a PDF you place in the project, e.g. "files/resume.pdf" -->
+    </div>
+</header>
+
+<main class="sheet">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+        <div class="hero__seal" aria-hidden="true">
+            <svg viewBox="0 0 120 120" class="seal">
+                <circle cx="60" cy="60" r="56" class="seal__ring-outer"/>
+                <circle cx="60" cy="60" r="46" class="seal__ring-inner"/>
+                <text x="60" y="55" class="seal__text" text-anchor="middle">EST.</text>
+                <text x="60" y="72" class="seal__year" text-anchor="middle">2026</text>
+                <!-- ^ Replace 2026 with a meaningful year (grad year, career start, etc.) -->
+            </svg>
+        </div>
+
+        <p class="hero__eyebrow">Portfolio &amp; Record</p>
+        <h1 class="hero__name">Your Full Name</h1>
+        <p class="hero__tagline">
+            One line describing you — e.g. "Software engineer, university sprinter,
+            and finance graduate." Replace this with your own tagline.
+        </p>
+
+        <div class="hero__photo">
+            <!-- Replace this placeholder with: <img src="images/profile.jpg" alt="Your Name"> -->
+            <div class="photo-placeholder">
+                <span>Add photo</span>
+                <small>images/profile.jpg — square, min 800×800px</small>
+            </div>
+        </div>
+
+        <div class="hero__stats">
+            <div class="stat">
+                <span class="stat__value">X</span>
+                <span class="stat__label">Years experience</span>
+            </div>
+            <div class="stat">
+                <span class="stat__value">X</span>
+                <span class="stat__label">Degrees earned</span>
+            </div>
+            <div class="stat">
+                <span class="stat__value">X</span>
+                <span class="stat__label">Seasons competed</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="record" id="about">
+        <div class="record__head">
+            <span class="record__eyebrow">Index</span>
+            <h2 class="record__title">About</h2>
+        </div>
+        <div class="record__body">
+            <p>
+                Write two or three sentences here about who you are, what drives you,
+                and how your professional, academic, and athletic paths connect. Keep
+                it in your own voice — this is the one place on the page that reads
+                like a person rather than a record.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============ PROFESSIONAL EXPERIENCE ============ -->
+    <section class="record" id="experience">
+        <div class="record__head">
+            <span class="record__eyebrow">01</span>
+            <h2 class="record__title">Professional Experience</h2>
+        </div>
+
+        <div class="record__body">
+            <!-- Repeat this .entry block for each role. Duplicate / delete as needed. -->
+            <article class="entry">
+                <div class="entry__when">
+                    <span class="entry__dates">2025 — Present</span>
+                </div>
+                <div class="entry__what">
+                    <h3 class="entry__role">Job Title</h3>
+                    <p class="entry__org">Company Name · City, Country</p>
+                    <p class="entry__desc">
+                        One or two sentences on what you did and the impact you had.
+                        Favor concrete outcomes over duties — what changed because you
+                        were there.
+                    </p>
+                </div>
+            </article>
+
+            <article class="entry">
+                <div class="entry__when">
+                    <span class="entry__dates">2023 — 2025</span>
+                </div>
+                <div class="entry__what">
+                    <h3 class="entry__role">Previous Job Title</h3>
+                    <p class="entry__org">Company Name · City, Country</p>
+                    <p class="entry__desc">
+                        Description of this role and its key achievement or responsibility.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============ ACADEMIC RECORD ============ -->
+    <section class="record" id="academic">
+        <div class="record__head">
+            <span class="record__eyebrow">02</span>
+            <h2 class="record__title">Academic Record</h2>
+        </div>
+
+        <div class="record__body">
+            <!-- Repeat this .entry block for each degree / qualification -->
+            <article class="entry">
+                <div class="entry__when">
+                    <span class="entry__dates">2021 — 2025</span>
+                </div>
+                <div class="entry__what">
+                    <h3 class="entry__role">Degree Name, e.g. B.Sc. Computer Science</h3>
+                    <p class="entry__org">University Name · City, Country</p>
+                    <p class="entry__desc">
+                        Note honors, GPA, thesis topic, or relevant coursework here.
+                    </p>
+                </div>
+            </article>
+
+            <article class="entry">
+                <div class="entry__when">
+                    <span class="entry__dates">2017 — 2021</span>
+                </div>
+                <div class="entry__what">
+                    <h3 class="entry__role">High School Diploma</h3>
+                    <p class="entry__org">School Name · City, Country</p>
+                    <p class="entry__desc">
+                        Note any distinctions, honor roll, or relevant activities here.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============ ATHLETIC CAREER ============ -->
+    <section class="record" id="sports">
+        <div class="record__head">
+            <span class="record__eyebrow">03</span>
+            <h2 class="record__title">Athletic Career</h2>
+        </div>
+
+        <div class="record__body">
+            <!-- Repeat this .entry block for each team / season / achievement -->
+            <article class="entry">
+                <div class="entry__when">
+                    <span class="entry__dates">2022 — 2025</span>
+                </div>
+                <div class="entry__what">
+                    <h3 class="entry__role">Sport — Position / Discipline</h3>
+                    <p class="entry__org">Team / Club Name · League or Division</p>
+                    <p class="entry__desc">
+                        Note key results, records, captaincy, or awards here.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Optional: a small gallery of action photos -->
+            <div class="gallery">
+                <div class="photo-placeholder photo-placeholder--sm">
+                    <span>Add photo</span>
+                    <small>images/sport-1.jpg</small>
+                </div>
+                <div class="photo-placeholder photo-placeholder--sm">
+                    <span>Add photo</span>
+                    <small>images/sport-2.jpg</small>
+                </div>
+                <div class="photo-placeholder photo-placeholder--sm">
+                    <span>Add photo</span>
+                    <small>images/sport-3.jpg</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="record record--contact" id="contact">
+        <div class="record__head">
+            <span class="record__eyebrow">Contact</span>
+            <h2 class="record__title">Get in Touch</h2>
+        </div>
+        <div class="record__body">
+            <ul class="contact-list">
+                <li><a href="mailto:you@example.com">you@example.com</a></li>
+                <li><a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+                <li><a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub ↗</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="foot">
+        <p>&copy; 2026 Your Name. Built and maintained independently.</p>
+    </footer>
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
