@@ -444,3 +444,46 @@ button:focus-visible {
     .hero__stats { gap: 24px; flex-wrap: wrap; }
     .gallery { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   LIGHTBOX — full-screen photo enlarge on click
+   ========================================================================== */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(27, 30, 36, 0.92);
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    z-index: 1000;
+}
+.lightbox.is-open { display: flex; }
+
+.lightbox__img {
+    max-width: 90vw;
+    max-height: 88vh;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    object-fit: contain;
+    cursor: default;
+}
+
+.lightbox__close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    background: none;
+    border: none;
+    color: var(--paper);
+    font-size: 2.2rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 8px;
+}
+.lightbox__close:hover { color: var(--gold-soft); }
+
+@media (max-width: 480px) {
+    .lightbox { padding: 16px; }
+    .lightbox__close { top: 12px; right: 16px; font-size: 1.8rem; }
+}

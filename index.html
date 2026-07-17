@@ -57,8 +57,8 @@
         </p>
 
         <div class="hero__photo">
-            <!-- No wrapper div, no HTML width/height attributes — CSS (.photo) fully controls sizing -->
-            <img src="images/ProfessionalPhoto.jpeg" alt="Dimar van der Linde" class="photo photo--sm"/>
+            <!-- Square crop (.photo, no --sm) with object-position tuned to bring the face into frame -->
+            <img src="images/ProfessionalPhoto.jpeg" alt="Dimar van der Linde" class="photo" style="object-position: center 65%;"/>
         </div>
 
         <div class="hero__stats">
@@ -168,6 +168,7 @@
                     <p class="entry__org">Garsfontein High School · Pretoria, South Africa</p>
                     <p class="entry__desc">
                         - Activities and societies: Athletics, Swimming (1st team), Cricket (2nd team), Rugby (3rd team), and Cycling
+                    </p>
                     <p> - Matric Average: 79%</p>
                     <p> - Distinctions: English (FAL), Life Orientation, History, and Information Technology</p>
                 </div>
@@ -257,7 +258,7 @@
         <div class="record__body">
             <ul class="contact-list">
                 <li><a href="mailto:dimarvanderlinde@gmail.com">dimarvanderlinde@gmail.com</a></li>
-                <li><a href="+27 78 509 5231">+27 78 509 5231</a></li>
+                <li><a href="tel:+27785095231">+27 78 509 5231</a></li>
                 <li><a href="https://www.linkedin.com/in/dimar-van-der-linde-7571463a0/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
                 <li><a href="https://github.com/dimarvanderlinde-source" target="_blank" rel="noopener">GitHub ↗</a></li>
             </ul>
@@ -275,8 +276,9 @@
 <script src="js/script.js"></script>
 
 <!-- ============ LIGHTBOX ============ -->
-<!-- Populated by js/script.js when a .photo image is clicked -->
-<div class="lightbox" id="lightbox" hidden>
+<!-- Populated by js/script.js when a .photo image is clicked. Visibility is
+     controlled by the "is-open" class (see style.css), not the hidden attribute. -->
+<div class="lightbox" id="lightbox">
     <button class="lightbox__close" id="lightboxClose" aria-label="Close enlarged photo">&times;</button>
     <img src="" alt="" class="lightbox__img" id="lightboxImg">
 </div>
